@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=chrome">
+
+    <!--  Document title  -->
+    <title>INR Wallet</title>
+
+    <!--  Inery icon  -->
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+
+    <!--  Bootstrap css  -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!--
+        Bootstrap css
+        Comment bootstrap.css for optimization before use.
+    -->
+
+    <!--  Custom css  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="67">
+<!--start navbar-->
+    <nav class="navbar navbar-expand-lg fixed-top sticky nav-sticky-off" id="navbar">
+    <!--    start container    -->
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <img id="brand-image" src="./assets/img/brand-1.png" alt="Inery brand" height="22">
+            </a>
+            <button class="navbar-toggler collapsed btn collapse_custom" type="button" id="collapse-button">
+                <span class="navbar-toggle-icon"><i class="fa fa-bars" aria-hidden="true" id="collapse-icon"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapse-content" style="display: none">
+                <ul class="navbar-nav mx-auto navbar-center mt-lg-0 p-2">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link mx-2 fw-semibold">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#road-map" class="nav-link mx-2 fw-semibold">Road Map</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#features" class="nav-link mx-2 fw-semibold">Features</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#contact_us" class="nav-link mx-2 fw-semibold">Contact Us</a>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-sm nav-btn mb-lg-0 mb-4 btn-outline-light text-primary fw-semibold nav__btn">Enter Wallet</a>
+            </div>
+        </div>
+    <!--    end container    -->
+    </nav>
+<!--end navbar-->
+
+<!--start hero-->
+    <section class="d-flex justify-content-center align-items-center overflow-hidden vh-100 background-color-1 hero__background" id="home">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 mt-5">
+                    <div class="text-center">
+                        <div class="animation-container">
+                            <img src="assets/img/hero.png" alt="UFO" class="img-fluid" style="max-height: 65vh;">
+                            <img src="assets/img/animation.png" alt="Animation INR" class="animation-image">
+                        </div>
+                        <h2 class="h2 text-white-50 text-uppercase position-relative">INERY Wallet</h2>
+                        <p class="text-white-50 mt-3">Inery wallet is a multi-platform crypto wallet which lets us store INR coin natively.<br> (test-net version)</p>
+<!--                        <a href="#" class="btn btn-light text-primary fw-normal text-uppercase">-->
+<!--                            Know More <i class="fa fa-chevron-right " aria-hidden="true"></i>-->
+<!--                        </a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--end hero-->
+
+<!--start road-map -->
+    <section class="h-100" id="road-map">
+        <div class="container">
+            <div class="row justify-content-center pt-2">
+                <div class="col-lg-8 text-center mt-5">
+                    <h2 class="fs-3 fw-normal lh-1 text-dark mb-3">
+                        Our road map
+                    </h2>
+                    <p class="text-muted">
+                        We decided to build inery wallet based on our previous experience.<br> We analyzed the successful projects and the bellow road map is the result of that analysis.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-10 col-lg-4 col-md-6 mt-2 pt-2">
+                    <div class="card rounded border-0 road-map__cards">
+                        <div class="card-body text-center">
+                            <i class="fa fa-diamond fa-3x" aria-hidden="true"></i>
+                            <h5 class="fs-14 mt-3">Custom UX/UI</h5>
+                            <p class="text-muted mb-1">An essential part of the wallet is UX/UI which lets us visualize INR blockchain data. Not a simple design and will take a lot of time.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10 col-lg-4 col-md-6 mt-2 pt-2">
+                    <div class="card rounded border-0 road-map__cards">
+                        <div class="card-body text-center">
+                            <i class="fa fa-check fa-3x" aria-hidden="true"></i>
+                            <h5 class="fs-14 mt-3">INR Coin Support</h5>
+                            <p class="text-muted mb-1">The major part of this wallet is to Receive and Send INR coins via JSON RPC API :) simple part but need to have a blockchain explorer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10 col-lg-4 col-md-6 mt-2 pt-2">
+                    <div class="card rounded border-0 road-map__cards">
+                        <div class="card-body text-center">
+                            <i class="fa fa-code fa-3x" aria-hidden="true"></i>
+                            <h5 class="fs-14 mt-3">INR Fungible Tokens</h5>
+                            <p class="text-muted mb-1">Fungible tokens or assets are divisible and non-unique. adding this feature requires a standard Token structure just like the erc-20.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10 col-lg-4 col-md-6 mt-2 pt-2">
+                    <div class="card rounded border-0 road-map__cards">
+                        <div class="card-body text-center">
+                            <i class="fa fa-code fa-3x" aria-hidden="true"></i>
+                            <h5 class="fs-14 mt-3">INR Non Fungible Tokens</h5>
+                            <p class="text-muted mb-1">Non fungible assets are unique and non-divisible. This part may be more difficult rather than fungible tokens because need to ipfs storage or alternative storage.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10 col-lg-4 col-md-6 mt-2 pt-2">
+                    <div class="card rounded border-0 road-map__cards">
+                        <div class="card-body text-center">
+                            <i class="fa fa-wrench fa-3x" aria-hidden="true"></i>
+                            <h5 class="fs-14 mt-3">Human Readable Address</h5>
+                            <p class="text-muted mb-1">replacing the HRAs used by Inery with a creative and lovely one like MyName.INR-WALLET.com :) for better SEO</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10 col-lg-4 col-md-6 mt-2 pt-2">
+                    <div class="card rounded border-0 road-map__cards">
+                        <div class="card-body text-center">
+                            <i class="fa fa-university fa-3x" aria-hidden="true"></i>
+                            <h5 class="fs-14 mt-3">Dapp Support</h5>
+                            <p class="text-muted mb-1">Coding a javascript library for injecting into the web to supporting decentralized applications. hardest part of the road map :)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--end road-map -->
+
+<!--start features-->
+    <section class="v-100 d-flex align-items-center mt-5" id="features">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12 col-md-5 mx-auto d-flex align-items-center justify-content-center h-75">
+                    <img src="assets/img/phone.png" alt="feature" class="img-fluid rounded feature__img">
+                </div>
+                <div class="col-12 col-md-7 d-flex flex-column justify-content-center align-items-start mt-3 mt-md-0 ps-sm-4">
+                    <h6 class="text-uppercase text-primary mb-3 feature__header">Features</h6>
+                    <h3 class="fw-semibold mb-4">Community driven project</h3>
+                    <p class="text-muted mb-3">As INERY community members we will be happy to be useful for the project.<br>We believe in INR coin and growing our services step by step.</p>
+                    <h6 class="text-dark mb-2"><i class="fa fa-check-square-o mx-1 feature__icons" aria-hidden="true"></i> Website Landing page.</h6>
+                    <h6 class="text-dark mb-2"><i class="fa fa-check-square-o mx-1 feature__icons" aria-hidden="true"></i> Wallet UX/UI.</h6>
+                    <h6 class="text-dark mb-3"><i class="fa fa-square-o mx-1 feature__icons" aria-hidden="true"></i> Supporting INR coin and tokens</h6>
+                    <button href="https://t.me/inery_blockchain" class="btn btn-primary feature__btn">Join us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--start features-->
+
+<!--start contact us-->
+    <section id="contact_us" class="m-5">
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-8 text-center pt-5">
+                    <h2 class="text-dark mb-3">
+                        Contact Us
+                    </h2>
+                    <p class="text-muted">
+                        We will check the tickets every week.<br>
+                        Don't forget to leave a valid email address on this contact form.
+                    </p>
+                </div>
+            </div>
+            <form name="form" action="" method="post">
+                <div class="row">
+                    <div class="col-12 mt-4">
+                        <div class="row">
+                            <div class="col-6">
+                                <label class="form-label fw-normal" for="email">*Email address:</label>
+                                <input class="form-control" type="email" name="email" id="email" placeholder="Your email" required>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label fw-normal" for="subject">*Subject:</label>
+                                <input class="form-control" type="text" name="text" id="subject" placeholder="your subject" required>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <label class="form-label fw-normal" for="message">*Message:</label>
+                                <textarea class="form-control" id="message" placeholder="Enter your message..." rows="5"></textarea>
+                            </div>
+
+                            <div class="col-3">
+                                <input class="btn btn-primary mt-5 feature__btn" type="submit" value="Send message">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+<!--start contact us-->
+
+<!--start footer-->
+    <footer class="background-color-1">
+        <div class="container">
+            <div class="row">
+                <div class="mt-1 fs-4 mx-auto d-flex align-items-center justify-content-center">
+                    <a href="#" class="text-decoration-none text-white m-2"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#" class="text-decoration-none text-white m-2"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+                    <a href="#" class="text-decoration-none text-white m-2"><i class="fa fa-github" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="mx-auto d-flex align-items-center justify-content-center text-uppercase">
+                    <a href="#" class="text-decoration-none text-white-50 m-1">White paper |</a>
+                    <a href="#" class="text-decoration-none text-white-50 m-1">Road map |</a>
+                    <a href="#" class="text-decoration-none text-white-50 m-1">Docs</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="text-muted p-2 mx-auto text-center">
+                    2022 © INR Wallet. Created by FT
+                </div>
+            </div>
+        </div>
+    </footer>
+<!--end footer-->
+
+<!--Bootstrap js -->
+<script src="./assets/js/bootstrap.bundle.js"></script>
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+<!--
+    Bootstrap js
+    Comment bootstrap.bundle.js for optimization before use.
+-->
+
+<!--font awesome icons (free version)-->
+<script src="./assets/js/fas.js"></script>
+
+<script>
+    let collapse_button = document.getElementById("collapse-button");
+    let collapse_content = document.getElementById("collapse-content");
+    let collapse_icon = document.getElementById("collapse-icon");
+    collapse_button.addEventListener("click", event => {
+        if (collapse_content.style.display === "none"){
+            collapse_content.style.display = "block";
+            collapse_icon.classList.remove("fa-bars");
+            collapse_icon.classList.add("fa-angle-up");
+        }else {
+            collapse_content.style.display = "none";
+            collapse_icon.classList.remove("fa-angle-up");
+            collapse_icon.classList.add("fa-bars");
+        }
+    })
+
+    function windowScroll() {
+        const navbar = document.getElementById("navbar");
+        const brand_image = document.getElementById("brand-image");
+        const n_link = document.querySelector(".nav-link");
+        if (navbar) {
+            if (
+                document.body.scrollTop >= 50 ||
+                document.documentElement.scrollTop >= 50
+            ) {
+                navbar.classList.add("nav-sticky");
+                navbar.classList.remove("nav-sticky-off");
+                navbar.classList.add("p-0");
+                brand_image.src= "./assets/img/brand-2.png";
+            } else {
+                navbar.classList.remove("nav-sticky");
+                navbar.classList.add("nav-sticky-off");
+                navbar.classList.remove("p-0");
+                brand_image.src= "./assets/img/brand-1.png";
+            }
+        }
+    }
+
+    window.addEventListener('scroll', (ev) => {
+        windowScroll();
+    })
+
+</script>
+</body>
+</html>

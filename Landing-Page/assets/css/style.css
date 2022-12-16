@@ -1,0 +1,157 @@
+:root{
+    --color-1: #0a0634;
+    --color-2: #00FFFF;
+    --color-3: #FFFFFF;
+    --color-4: #F9F9FD;
+}
+
+.background-color-1{
+    background-color: var(--color-1);
+}
+.background-color-2{
+    background-color: var(--color-2);
+}
+
+.background-color-3{
+    background-color: var(--color-3);
+}
+
+.text-color-1{
+    color: var(--color-2);
+}
+.text-color-2{
+    color: rgba(255,255,255,50);
+}
+.collapse_custom, .collapse_custom:focus{
+    color: #a7a9c0;
+    border: none;
+}
+
+.nav-sticky{
+    background-color: var(--color-3);
+    box-shadow: 0 10px 10px rgba(0,0,0,.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-sticky .navbar-nav .nav-item .nav-link,
+.nav-sticky-off .navbar-nav .nav-item .nav-link {
+    color: #a7a9c0;
+}
+
+.nav-sticky-off{
+    background-color: var(--color-1);
+    box-shadow: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Video background */
+.video_background {
+    position: relative;
+    width: 55vw;
+    height: 44vh;
+    overflow: hidden;
+}
+
+.video_background--video {
+    width: 100%;
+}
+
+.video_background--text {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background-color: rgba(10, 6, 52, 0.99);
+    color: #fff;
+    font-weight: 900;
+    font-size: 100px;
+    font-family: sans-serif;
+    /* Mix Blend Mode does the all magic */
+    mix-blend-mode: multiply;
+    user-select: none;
+    margin: 0;
+}
+
+.hero__background {
+    background-image: url("../img/hero-bg.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.animation-container {
+    position: relative;
+}
+
+.animation-image {
+    position: absolute;
+    max-height: 6%;
+    left: 47%;
+    bottom: 22%;
+
+    animation: INR_hover ease-in-out 5s infinite;
+}
+
+.nav__btn {
+    color: var(--color-2) !important;
+    border: 1px solid var(--color-2);
+}
+
+.nav__btn:hover {
+    color: var(--color-1) !important;
+    border: 1px solid var(--color-2);
+    background-color: rgba(0, 255, 255, 1);
+}
+
+.feature__img {
+    height: 33rem;
+}
+.feature__header,.feature__icons {
+    color: var(--color-2) !important;
+}
+.feature__btn {
+    background-color: var(--color-2);
+    border: 1px solid var(--color-2);
+}
+.feature__btn:hover {
+    background-color: rgba(0,0,0,0);
+    color: var(--color-2);
+    border: 1px solid var(--color-2);
+}
+
+.road-map__cards {
+    border: 1px solid rgba(0,0,0,0) !important;
+    transition: transform 300ms ease-in-out;
+}
+.road-map__cards:hover {
+    transition: transform 300ms ease-in-out;
+    color: var(--color-2);
+    border: 1px solid var(--color-2) !important;
+    transform: translateY(-5px);
+}
+
+@keyframes INR_hover {
+
+    25% {
+        left: 44.5%;
+    }
+
+    50% {
+        left: 47%;
+        bottom: 45%;
+        transform: rotate(-12.5deg) scale(0.85);
+
+    }
+
+    75% {
+        left: 50%;
+        transform: rotate(12.5deg) scale(0.85);
+    }
+
+    100% {
+        left: 47%;
+    }
+
+}
+body::-webkit-scrollbar{
+    display: none;
+}
