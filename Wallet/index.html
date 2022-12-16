@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=chrome">
+
+    <title>wallet</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/splide.min.css">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+</head>
+<body class="container-fluid p-0">
+
+<!-- start wallet login/signup -->
+<section class="container d-none" id="login_page">
+    <div class="row vh-100 py-sm-5">
+        <div class="h-100 col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 rounded-2 login">
+            <div class="splide row h-100">
+                <div class="d-flex align-items-center justify-content-around">
+                    <h6 class="h6 login__title">Inery.</h6>
+                    <ul class="splide__pagination position-static login__pagination"></ul>
+                    <h6 class="h6 login__title">Wallet</h6>
+                </div>
+                <div class="splide__track h-75">
+                    <ul class="splide__list">
+                        <li class="splide__slide row custom-card">
+                            <div class="col-7 col-md-6 mx-auto d-flex align-items-center">
+                                <img class="img-fluid custom-card__hero-logo" src="./assets/img/logo.png" alt="logo wil be here">
+                            </div>
+                            <div class="col-10 offset-1 col-md-8 offset-md-2 d-flex flex-column align-items-center justify-content-center">
+                                <h3 class="h2 text-uppercase custom-card__title">In <img class="img-fluid custom-card__title-logo" src="./assets/img/inr.png" alt=""> ry
+                                    wallet
+                                </h3>
+                                <p class="fw-semibold text-center mt-3 custom-card__subtitle">This a beta version (test-net) of a crypto wallet for inery coin. Try it with your own risks.</p>
+                            </div>
+                        </li>
+                        <li class="splide__slide row custom-card">
+                            <div class="col-7 col-md-6 mx-auto d-flex align-items-center">
+                                <img class="img-fluid custom-card__hero-logo" src="./assets/img/shield.png" alt="logo wil be here">
+                            </div>
+                            <div class="col-10 offset-1 col-md-8 offset-md-2 d-flex flex-column align-items-center justify-content-center">
+                                <h3 class="h2 text-uppercase custom-card__title">Is secure?</h3>
+                                <p class="fw-semibold text-center mt-3 custom-card__subtitle">Your private-key is encrypted by your password and saved in your browser. So depends on u :)</p>
+                            </div>
+                        </li>
+                        <li class="splide__slide row">
+                            <div class="col-10 mx-auto h-100 d-flex flex-column align-items-center justify-content-center">
+                                <form action="#" class="custom-form" id="login_form">
+                                    <label for="private-key" class="form-label custom-form__label">Enter your private key:</label>
+                                    <div class="input-group mb-3">
+                                        <input class="form-control custom-form__text-input" id="private-key" name="private_key" type="text"  placeholder="Private key" value="">
+                                        <button class="btn btn-outline-dark custom-form__button" type="button" id="1"><i class="fa fa-random" aria-hidden="true"></i></button>
+                                    </div>
+                                    <label for="password" class="form-label custom-form__label">Enter your password:</label>
+                                    <input class="form-control mb-4 custom-form__text-input" id="password" name="password" type="text" placeholder="Password">
+                                    <button class="btn btn-outline-dark custom-form__button align-self-center" onclick="login()">Enter</button>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="splide__arrows col-10 offset-1">
+                    <button class="splide__arrow splide__arrow--prev position-static d-none">Prev</button>
+                    <button class="splide__arrow splide__arrow--next position-static login__button">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end wallet login/signup -->
+
+<!-- start wallet application -->
+<section class="container d-none" id="wallet_page">
+    <div class="row vh-100 py-sm-5">
+        <div class="h-100 col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 rounded-2 wallet">
+            <div class="splide menu row h-100">
+                <div class="splide__track h-100 w-100">
+                    <ul class="splide__list text-white">
+                        <li class="splide__slide">
+                            <div class="container h-100 w-100">
+                                <div class="row w-100 h-100 m-0 balance">
+                                    <div class="col-12 p-0">
+                                        <div class="d-flex align-items-center justify-content-between balance__header my-3">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <img class="img-fluid balance__header-logo" src="./assets/img/logo.png" alt="Wallet Logo">
+                                                <div class="d-flex ms-2 flex-column justify-content-center align-items-center">
+                                                    <h6 class="h6 mb-0 text-uppercase balance__header-title">
+                                                        Inery wallet
+                                                    </h6>
+                                                    <p class="text-muted mb-0 balance__header-text">0xdaaaaaaaaaaaa</p>
+                                                </div>
+                                            </div>
+                                            <div class="balance__header-icon">
+                                                <i class="fa fa-clipboard fs-3" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                        <div class="balance__body">
+                                            <div class="mt-2">
+                                                <h6 class="h6 mb-1 balance__body-text">
+                                                    Your Balance:
+                                                </h6>
+                                                <h6 class="h5 balance__body-title">
+                                                    50000 $INR
+                                                </h6>
+                                            </div>
+                                            <div class="mt-3 text-uppercase balance__body-chart">
+                                                <h6 class="h6 balance__body-title">
+                                                    INR price:
+                                                </h6>
+                                                <div class="tradingview-widget-container">
+                                                    <div id="tradingview_cfb21"></div>
+                                                </div>
+                                            </div>
+                                            <div class="mt-2 balance__body-activity">
+                                                <h6 class="h6 mb-2 text-uppercase balance__body-title">
+                                                    Activity:
+                                                </h6>
+                                                <div class="overflow-scroll balance__body-event">
+                                                    <div class="event">
+                                                        <div class="event__title">
+                                                            <i class="fa fa-history event__icon" aria-hidden="true"></i>
+                                                            <h6 class="event__title">Transfer</h6>
+                                                        </div>
+                                                        <h6 class="event__message">+ 248 $INR</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="row w-100 h-100 m-0">
+                                <div class="col-12 d-flex flex-column align-items-center justify-content-center">
+                                    <img src="./assets/img/gift.png" alt="gift" class="img-fluid">
+                                    <h5 class="h5 mt-3">
+                                        Free HRAs
+                                    </h5>
+                                    <p class="text-muted text-center">
+                                        You can gift your friend free human-readable address as NFT in this section.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="row w-100 h-100 m-0">
+                                <div class="col-12 d-flex flex-column align-items-center justify-content-center send">
+                                    <div class=" w-100 rounded-3 d-flex flex-column align-items-center justify-content-evenly send__box">
+                                        <h5 class="h5 text-center text-uppercase send__title">
+                                            Amount
+                                        </h5>
+                                        <div class="form-floating">
+                                            <input class="form-control form-control-lg send__input" type="number" id="floatingInput" placeholder="100">
+                                            <label class="send__label" for="floatingInput">100 $INR:</label>
+                                        </div>
+                                        <h6 class="h6 send__subtitle">
+                                            Transaction fee ~0 $INR
+                                        </h6>
+                                    </div>
+                                    <i class="fa fa-arrow-down send__icon" aria-hidden="true"></i>
+                                    <div class=" w-100 rounded-3 d-flex flex-column align-items-center justify-content-evenly send__box">
+                                        <h5 class="h5 text-center text-uppercase send__title">
+                                            To address
+                                        </h5>
+                                        <div class="form-floating">
+                                            <input class="form-control form-control-lg send__input" type="text" id="floatingPassword" placeholder="Reception address">
+                                            <label class="send__label" for="floatingPassword">$INR wallet address:</label>
+                                        </div>
+                                        <h6 class="h6 send__subtitle">
+                                            Double check address :)
+                                        </h6>
+                                    </div>
+                                    <button class="btn btn-outline-secondary w-100 mt-3 send__submit" type="submit">Send now</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="splide__arrows d-none"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end wallet application  -->
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/splide.min.js"></script>
+    <script src="./assets/js/fas.js"></script>
+    <script>
+        let splide = new Splide('.splide',
+            {
+                type : 'slide',
+                perMove: 1,
+                perPage: 1,
+                focus  : 'center',
+            }
+        );
+        splide.mount();
+
+
+        const menu = new Splide( '.menu' );
+        const navbar = [
+            '<i class="fa fa-home fa-3" aria-hidden="true"></i>',
+            '<i class="fa fa-gift" aria-hidden="true"></i>',
+            '<i class="fa fa-send" aria-hidden="true"></i>'
+        ];
+        menu.on( 'pagination:mounted', function ( data ) {
+            // You can add your class to the UL element
+            data.list.classList.add( 'splide__pagination--custom' );
+
+
+            // `items` contains all dot items
+
+            data.items.forEach( function ( item ) {
+                item.button.innerHTML = String(navbar[item.page]);
+            } );
+        } );
+        menu.mount();
+    </script>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+        new TradingView.widget(
+            {
+                "autosize": true,
+                "symbol": "HUOBI:INRUSDT",
+                "interval": "D",
+                "timezone": "Etc/UTC",
+                "theme": "dark",
+                "style": "2",
+                "locale": "en",
+                "toolbar_bg": "#000000",
+                "enable_publishing": false,
+                "hide_top_toolbar": true,
+                "hide_legend": true,
+                "save_image": false,
+                "container_id": "tradingview_cfb21"
+            }
+        );
+    </script>
+    <script>
+        const login_page = document.getElementById('login_page');
+        const wallet_page = document.getElementById('wallet_page');
+
+
+
+        let is_logged = localStorage.getItem('is_logged') ;
+        let private_key = localStorage.getItem('private_key');
+        let password = localStorage.getItem('password');
+
+
+        if (localStorage?.is_logged === undefined || localStorage?.is_logged === false || localStorage?.is_logged === 'false'){
+            login_page.classList.remove('d-none');
+            wallet_page.classList.add('d-none');
+        }else {
+            login_page.classList.add('d-none')
+            wallet_page.classList.remove('d-none');
+        }
+
+        function login() {
+            const form = document.getElementById("login_form");
+            let is_logged = localStorage.getItem('is_logged') || false;
+            let private_key = localStorage.getItem('private_key') || '';
+            let password = localStorage.getItem('password') || '';
+
+            if (form.elements['private_key'].value
+                && form.elements['password'].value
+                && (is_logged === 'false' || is_logged === false )){
+
+                    localStorage.setItem('is_logged', true);
+                    localStorage.setItem('private_key', form.elements['private_key'].value);
+                    localStorage.setItem('password', form.elements['password'].value);
+
+                    return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

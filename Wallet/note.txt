@@ -1,0 +1,33 @@
+alert
+quote
+inch
+enemy
+answer
+flee
+attack
+mother
+bag
+embark
+canvas
+farm
+
+
+Account Name
+
+testwallet
+
+Server Name
+
+86.57.66.86
+
+Server IP
+
+86.57.66.86
+
+Public Key
+
+INE7y3nZmAqBuRfDfspDoV6rLvKeWS9p73kNPTovaQmuXguF1cBoN
+
+Private Key
+
+5KLnEpSRmq8J2oWrP5pgSHVUTrpsoGasdbU2g1qMBXBiVpVhpYi
